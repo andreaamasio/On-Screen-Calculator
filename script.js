@@ -64,6 +64,10 @@ const equalButton=document.querySelector("#equal")
 equal.addEventListener("click",showResult)
 
 function showResult(event){
+    console.table(inputs)
+    for (i in inputs){
+        if (inputs[i]===null) break
+    }
     inputs["secondNum"]=Number(display.textContent)
     clearDisplay()
     operations.textContent+=` ${inputs.secondNum}`
